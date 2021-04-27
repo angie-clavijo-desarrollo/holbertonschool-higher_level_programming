@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-def alpha():
-        for c in range(97, 123):
-                print(chr(c), end="")
-alpha()
+for i in range(97, 123):
+    print(chr(i), end="")
+
