@@ -6,22 +6,21 @@
 **/
 int check_cycle(listint_t *list)
 {
-	listint_t object1 = list;
-	listint_t object2 = list;
+	listint_t *object_tur = list;
+	listint_t *object_har = list;
 
-	object2 = list;
-	object1 = list->next;
+	object_har = list;
+	object_tur = list->next;
 
-	if (list == '\0' || list->next == '\0' || object1->next == '\0')
+	if (list == NULL)
 	{
 		return (0);
-	}
-
-	while (object1 != '\0')
-	{
-		if (object1 == object2)
+		while (object_har != NULL && object_har->next != NULL)
 		{
-			return (1);
+			if (object_tur == object_har)
+			{
+				return (1);
+			}
 		}
 	}
 	return (0);
