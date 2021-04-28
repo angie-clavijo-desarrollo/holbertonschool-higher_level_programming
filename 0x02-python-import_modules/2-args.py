@@ -5,4 +5,3 @@ if __name__ == "__main__":
     a = 1
     n = argument(1, 2, 4, a)
     print(argument(n), "{}".format(argument))
-
