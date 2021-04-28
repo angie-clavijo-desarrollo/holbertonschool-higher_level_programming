@@ -5,4 +5,4 @@ a = 1
 b = 2
 # add_0.add(1, 2)#
 # add(1, 2)##
-print("{:d} + {:d} =" .format(a, b), add(1, 2))
+print("{:d} + {:d} =" .format(a, b), add(a, b))
