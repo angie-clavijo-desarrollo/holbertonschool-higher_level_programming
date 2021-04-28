@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-#import function from add.py#
-import add_0
+# import add_0#
+from add_0 import add
 
-print(add_0.add(1, 2))
+# add_0.add(1, 2)#
+# add(1, 2)##
+print(add(1, 2))
