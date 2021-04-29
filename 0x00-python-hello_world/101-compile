@@ -1,3 +1,3 @@
 #!/bin/bash
 export PYFILE = my_main.py
-python3 $PYFILE | $PYFILEc
+python3 -m $PYFILE | -b $PYFILEc
