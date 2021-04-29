@@ -6,22 +6,13 @@ if __name__ == "__main__":
     b = 5
     if a != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        print(1)
         exit(1)
     elif (add, sub, mul, div) == (add, sub, mul, div):
-        if add == add:
-            print("{:d} + {:d} =" .format(a, b), add(a, b))
-            print(0)
-        if sub == sub:
-            print("{:d} - {:d} =" .format(a, b), sub(a, b))
-            print(0)
-        if mul == mul:
-            print("{:d} * {:d} =" .format(a, b), mul(a, b))
-            print(0)
-        if div == div:
-            print("{:d} / {:d} =" .format(a, b), div(a, b))
-            print(0)
+       print("{:d} + {:d} =" .format(a, b), add(a, b))
+       print("{:d} - {:d} =" .format(a, b), sub(a, b))
+       print("{:d} * {:d} =" .format(a, b), mul(a, b))
+       print("{:d} / {:d} =" .format(a, b), div(a, b))
+       exit(0)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
-        print(1)
         exit(1)
