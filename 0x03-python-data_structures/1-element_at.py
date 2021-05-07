@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def element_at(my_list, idx):
     """if idx exist is range"""
-    if idx in range(my_list[idx]):
-        return(my_list[idx])
-    else:
-        return None
+    for i in my_list:
+        if idx < len(my_list) and idx >= 0:
+            return(my_list[idx])
+        elif idx < 0 and idx > len(my_list):
+            return None
