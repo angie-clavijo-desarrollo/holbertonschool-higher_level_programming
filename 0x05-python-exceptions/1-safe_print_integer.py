@@ -3,10 +3,10 @@ def safe_print_integer(value):
     try:
         if value > 0 or value < 0:
             print("{:d}".format(value))
-        return (True)
+            return(True)
     except ValueError:
         if value != 0:
-            return (False)
+            return(False)
     except TypeError:
         if value != 0:
             return(False)
