@@ -10,7 +10,4 @@ class Square():
         Pass is for say that is empty
     """
     def function(self):
-        """This function is for
-        doing square empty
-        """
         pass
