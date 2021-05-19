@@ -15,19 +15,19 @@ class Square():
     Return area for square
     """
     def __init__(self, size=0):
-        self.__size = size
+        self.size = size
 
     @property
-    def value(self):
-        return(self.__value)
+    def size(self):
+        return(self.__size)
 
-    @value.setter
-    def value(self, size):
-        if type(size).__name__ != 'int':
+    @size.setter
+    def size(self, value):
+        if type(value).__name__ != 'int':
             raise TypeError('size must be an integer')
-        if size < 0:
+        if value < 0:
             raise ValueError('size must be >= 0')
-        self._value = size
+        self.__size = value
 
     def area(self):
         return(self.__size * self.__size)
