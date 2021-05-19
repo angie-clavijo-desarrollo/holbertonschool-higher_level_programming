@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""Class Square
+"""
+
+
 class Square():
     """
     This is a class with name Square
