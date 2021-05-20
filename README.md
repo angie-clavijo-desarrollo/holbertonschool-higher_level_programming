@@ -1,4 +1,1 @@
-# Higher Level Programming 🐍
-
-## Task 
-0x00. Python - Hello, World
+![alt text](https://1000marcas.net/wp-content/uploads/2020/11/Python-logo.png)
