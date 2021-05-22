@@ -1,4 +1,7 @@
 #!/usr/bin/python3
 def simple_delete(a_dictionary, key=""):
-    a_dictionary.pop("track")
-    return (a_dictionary)
+    if a_dictionary is None:
+        return(None)
+    else:
+        a_dictionary.pop(key)
+        return (a_dictionary)
