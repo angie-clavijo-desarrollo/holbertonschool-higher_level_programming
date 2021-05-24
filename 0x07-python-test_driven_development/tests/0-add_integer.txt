@@ -1,3 +1,6 @@
-#!/usr/bin/python3
-def add_integer(a, b=98):
-    return(a+b)
+    >>> function add
+
+Now use it:
+
+    >>> add(a, b=98 )
+    98
