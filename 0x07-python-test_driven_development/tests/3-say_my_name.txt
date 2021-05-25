@@ -1,14 +1,22 @@
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
+'''Function that print message(My name is) most parameters 
+'''     pass for first_name and last name
 >>> say_my_name("John", "Smith")
 My name is John Smith
 
+'''Function that print message(My name is) most parameters 
+'''     pass for first_name and last name
 >>> say_my_name("Walter", "White")
 My name is Walter White
 
+'''Function that print message(My name is) most parameters 
+'''     pass only first_name
 >>> say_my_name("Bob")
 My name is Bob
 
+'''Function that verify if one of parameters is diferent 
+'''     to string
 >>> try:
 ...     say_my_name(12, "White")
 ... except Exception as e:

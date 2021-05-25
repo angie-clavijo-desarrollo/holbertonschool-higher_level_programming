@@ -1,0 +1,40 @@
+>>> print_square = __import__('4-print_square').print_square
+
+''' Function that print # depending on parameter size in this case 4
+>>> print_square(4)
+>>> print("")
+####
+####
+####
+####
+
+''' Function that print # depending on parameter size in this case 10
+>>> print_square(10)
+>>> print("")
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+''' Function that print # depending on parameter size in this case 0
+>>> print_square(0)
+>>> print("")
+
+''' Function that print # depending on parameter size in this case 1
+>>> print_square(1)
+>>> print("")
+#
+
+'''Function that verify if parameter size is negative and print to error
+>>> try:
+...     print_square(-1)
+... except Exception as e:
+...     print(e)
+... print("")
+size must be >= 0
