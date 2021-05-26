@@ -3,7 +3,7 @@ def print_square(size):
     if type(size) != int:
         raise TypeError('size must be an integer')
     if type(size) == int:
-        for i in range (size):
+        for i in range(size):
             print("".join(["#" for i in range(size)]))
         return(size)
     if len(size) < 0:

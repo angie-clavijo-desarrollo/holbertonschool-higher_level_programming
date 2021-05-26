@@ -3,7 +3,8 @@ def matrix_divided(matrix, div):
     if type(matrix) == int and type(matrix) == float:
         return(matrix)
     if type(matrix) == None:
-        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+        raise TypeError('matrix must be a \
+            matrix (list of lists) of integers/floats')
     if len(matrix[0]) == len(matrix[1]):
         return(matrix)
     if len(matrix[0]) != len(matrix[1]):
