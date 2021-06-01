@@ -13,5 +13,5 @@ def save_to_json_file(my_obj, filename):
     Save of datas of file extern
     """
     with open(filename, mode="w", encoding="utf-8") as f:
-        output = f.write(str(my_obj))
-        return json.dumps(output)
+        f.write(str(my_obj))
+        json.dumps(my_obj)
