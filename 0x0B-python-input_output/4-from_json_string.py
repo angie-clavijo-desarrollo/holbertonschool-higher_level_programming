@@ -5,4 +5,4 @@ import json
 
 
 def from_json_string(my_str):
-    return json.dumps(my_str)
+   json.loads(my_str)
