@@ -5,4 +5,8 @@ import json
 
 
 def from_json_string(my_str):
-   json.loads(my_str)
+    """
+    Function that return the file.json
+    return string of file extern
+    """
+    json.loads(my_str)
