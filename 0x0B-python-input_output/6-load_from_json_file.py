@@ -10,6 +10,5 @@ def load_from_json_file(filename):
     And mode write, encoding utf-8
     Save of datas of file extern
     """
-    with open(filename, mode="w", encoding="utf-8") as f:
-        reader = f.read()
-        return json.loads(reader)
+    with open(filename, mode="r", encoding="utf-8") as f:
+        return json.load(f)
