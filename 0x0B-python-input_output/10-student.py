@@ -14,5 +14,5 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        if (type(attrs) == None):
+        if (type(attrs) is None):
             return(attrs.__dict__)
