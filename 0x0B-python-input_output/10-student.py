@@ -17,5 +17,5 @@ class Student:
         if(attrs is type(str)):
             return(self.last_name, self.first_name)
         else:
-            return( self.age, self.first_name, self.last_name, )
+            return(self.age, self.first_name, self.last_name, )
         return(self.__dict__)
