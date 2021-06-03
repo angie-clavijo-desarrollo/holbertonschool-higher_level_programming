@@ -7,16 +7,6 @@ class Rectangle(BaseGeometry):
     """
     Rectangle that inherits from
     """
-    def area(self):
-        raise Exception('area() is not implemented')
-
-    def integer_validator(self, name, value):
-        self.name = name
-        self.value = value
-        if isinstance(value, int) is False:
-            raise TypeError(f'{name} must be an integer')
-        if value <= 0:
-            raise ValueError(f'{name} must be greater than 0')
 
     def __init__(self, width, height):
         self.integer_validator("width", width)
