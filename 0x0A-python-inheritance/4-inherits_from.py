@@ -7,8 +7,8 @@ def inherits_from(obj, a_class):
     function that verify from is inherited
     parameter that is class
     """
-    if type(obj) != a_class and (isinstance(obj, a_class)):
-        return True
+    return type(obj) != a_class and (isinstance(obj, a_class))
+
 
 
 if __name__ == "__main__":
