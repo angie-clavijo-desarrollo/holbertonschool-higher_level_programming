@@ -21,4 +21,3 @@ if __name__ == "__main__":
     print(my_list)
     my_list.print_sorted()
     print(my_list)
-
