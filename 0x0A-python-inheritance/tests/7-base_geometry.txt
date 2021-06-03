@@ -94,7 +94,10 @@ True
 Traceback (most recent call last):
 Exception: area() is not implemented
 
+>>> ts = BaseGeometry()
 >>> try:
-...     bg.integer_validator("numbers", True)
+...     ts.integer_validator("numbers", True)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] numbers must be an integer
+
