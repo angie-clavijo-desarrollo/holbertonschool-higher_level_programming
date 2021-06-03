@@ -29,3 +29,27 @@ True
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [ValueError] distance must be greater than 0
+
+>>> try:
+...     bg.integer_validator("", 2)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+
+>>> try:
+...     bg.integer_validator("Jhon")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] integer_validator() missing 1 required positional argument: 'value'
+
+>>> try:
+...     bg.integer_validator()
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> try:
+...     bg.integer_validator("distance", -4)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] distance must be greater than 0
+
