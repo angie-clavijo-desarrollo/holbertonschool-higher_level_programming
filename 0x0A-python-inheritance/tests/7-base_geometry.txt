@@ -98,4 +98,3 @@ Exception: area() is not implemented
 ...     bg.integer_validator("numbers", True)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] numbers must be an integer
