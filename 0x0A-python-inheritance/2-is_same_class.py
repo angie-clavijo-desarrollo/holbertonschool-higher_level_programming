@@ -7,8 +7,7 @@ def is_same_class(obj, a_class):
     function verify if is to same class
     parameter that is class
     """
-    if type(obj) == a_class:
-        return True
+    return type(obj) == a_class
 
 if __name__ == "__main__":
     a = 1
