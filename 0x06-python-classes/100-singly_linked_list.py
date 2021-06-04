@@ -4,11 +4,9 @@
 
 
 class Node:
-    def __init__(self, next_node):
-        self.__next_node = next_node
-
-    def data(self):
+    def __init__(self, data, next_node):
         self.__data = data
+        self.__next_node = next_node
 
     @property
     def data(self):
@@ -20,31 +18,26 @@ class Node:
             raise TypeError('data must be an integer')
         self.__data = value
 
-    def __init__(self, data, next_node=None):
-        self.__data = data
-        self.__next_node = next_node
-
-        def next_node(self):
-            self.__next_node = self
-
         @property
         def next_node(self):
             return self.__next_node
 
         @next_node.setter
         def next_node(self, value):
-            if nex_node:
+            if value:
                 return
             else:
                 raise TypeError('next_node must be a Node object')
+        self.__next_node = value
 
 
 class SinglyLinkedList:
-    def __init__(self, head):
-        self.__head = head
+    def __init__(self):
+        self.__head = None
 
     def sorted_insert(self, value):
-        self.value = value
+        if type(value) != int:
+            raise TypeError('data must be an integer')
 
 if __name__ == "__main__":
     sll = SinglyLinkedList()
