@@ -38,52 +38,52 @@ class Rectangle(Base):
     """getter and setter for each instance attributes"""
     @property
     def width(self):
-        return self.__width
+        return self.width
 
     @width.setter
     def width(self, width):
-        self.__width = width
+        self.width = width
 
     @property
     def height(self):
-        return self.__height
+        return self.height
 
     @height.setter
     def height(self, height):
-        self.__height = height
+        self.height = height
 
     @property
     def x(self):
-        return self.__x
+        return self.x
 
     @x.setter
     def x(self, x):
-        self.__x = x
+        self.x = x
 
     @property
     def y(self):
-        return self.__y
+        return self.y
 
     @y.setter
     def y(self, y):
-        self.__y = y
+        self.y = y
 
     """update class Rectangle, add public method, return area value"""
     def area(self):
-        return self.__width * self.__height
+        return self.width * self.height
 
     """
     update class Rectangle, add public method,
     print # for width and height
     """
     def display(self):
-        if self.__width == 0 or self.__height:
+        if self.width == 0 or self.height:
             return ('')
         str = ('')
-        for iter_one in range(self.__height):
-            for iter_two in range(self.__width):
+        for iter_one in range(self.height):
+            for iter_two in range(self.width):
                 str = str + '#'
-            if iter_one != self.__height - 1:
+            if iter_one != self.height - 1:
                 str = str + '\n'
             return str
 
