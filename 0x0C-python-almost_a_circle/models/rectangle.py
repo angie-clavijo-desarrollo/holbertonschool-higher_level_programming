@@ -10,26 +10,6 @@ class Rectangle(Base):
         """call super class, with id, call with __init__ ,  or class parent"""
         super().__init__(id)
 
-        if type(width) is not int:
-            raise TypeError('width must be an integer')
-        if width <= 0:
-            raise ValueError('width must be > 0')
-
-        if type(height) is not int:
-            raise TypeError('height must be an integer')
-        if height <= 0:
-            raise ValueError('height must be > 0')
-
-        if type(x) is not int:
-            raise TypeError('x must be an integer')
-        if x < 0:
-            raise ValueError('x must be >= 0')
-
-        if type(y) is not int:
-            raise TypeError('y must be an integer')
-        if y < 0:
-            raise ValueError('y must be >= 0')
-
         self.width = width
         self.height = height
         self.x = x
@@ -38,35 +18,51 @@ class Rectangle(Base):
     """getter and setter for each instance attributes"""
     @property
     def width(self):
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, width):
-        self.width = width
+        if type(width) is not int:
+            raise TypeError('width must be an integer')
+        if width <= 0:
+            raise ValueError('width must be > 0')
+        self.__width = width
 
     @property
     def height(self):
-        return self.height
+        return self.__height
 
     @height.setter
     def height(self, height):
-        self.height = height
+        if type(height) is not int:
+            raise TypeError('height must be an integer')
+        if height <= 0:
+            raise ValueError('height must be > 0')
+        self.__height = height
 
     @property
     def x(self):
-        return self.x
+        return self.__x
 
     @x.setter
     def x(self, x):
-        self.x = x
+        if type(x) is not int:
+            raise TypeError('x must be an integer')
+        if x < 0:
+            raise ValueError('x must be >= 0')
+        self.__x = x
 
     @property
     def y(self):
-        return self.y
+        return self.__y
 
     @y.setter
     def y(self, y):
-        self.y = y
+        if type(y) is not int:
+            raise TypeError('y must be an integer')
+        if y < 0:
+            raise ValueError('y must be >= 0')
+        self.__y = y
 
     """update class Rectangle, add public method, return area value"""
     def area(self):
