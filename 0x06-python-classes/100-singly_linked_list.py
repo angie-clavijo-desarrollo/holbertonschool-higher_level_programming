@@ -39,6 +39,7 @@ class SinglyLinkedList:
         if type(value) != int:
             raise TypeError('data must be an integer')
 
+
 if __name__ == "__main__":
     sll = SinglyLinkedList()
     sll.sorted_insert(2)

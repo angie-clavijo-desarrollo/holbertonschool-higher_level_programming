@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """import functions of file calculator, * all"""
-if __name__ == "__main__":
+    if __name__ == "__main__":
     from calculator_1 import *
     a = 10
     b = 5
