@@ -69,45 +69,47 @@ class Rectangle(Base):
     def area(self):
         return self.width * self.height
 
-    """
-    update class Rectangle, add public method,
-    print # for width and height
-    """
     def display(self):
-        if self.width == 0 or self.height == 0:
-            return ('')
-        tmp = ('')
-        for iter_one in range(self.__height):
+        """verify y for print \n and iter and height print ' '
+        and  funally print #"""
+        print('\n' * self.__y, end='')
+        for iter_h in range(self.__height):
+            print(' ' * self.__x,  end='')
             print("".join(["#" for i in range(self.__width)]))
-        return (tmp)
-        """pending exercise 7"""
+
+        """update class Rectangle, add public method,
+        print # for width and height"""
+        if self.width == 0 or self.height == 0:
+            print("")
 
     """Overriding method"""
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
 
-    """method that assings argument to each attribute"""
-    def update(self, *args):
-        return "[Rectangle] ({}) {}/{} - {}/{}" \
-            .format(self.id, self.width, self.height, self.x, self.y)
-
-
-if __name__ == "__main__":
-    r1 = Rectangle(10, 10, 10, 10)
-    print(r1)
-
-    r1.update(89)
-    print(r1)
-
-    r1.update(89, 2)
-    print(r1)
-
-    r1.update(89, 2, 3)
-    print(r1)
-
-    r1.update(89, 2, 3, 4)
-    print(r1)
-
-    r1.update(89, 2, 3, 4, 5)
-    print(r1)
+    """method that assings ags each atri... and update  args and kwargs"""
+    def update(self, *args, **kwargs):
+        if len(args):
+            for iter_args, arg in enumerate(args):
+                if iter_args == 0:
+                    self.id = arg
+                elif iter_args == 1:
+                    self.__width = arg
+                elif iter_args == 2:
+                    self.__height = arg
+                elif iter_args == 3:
+                    self.__x = arg
+                elif iter_args == 4:
+                    self.__y = arg
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                elif key == "width":
+                    self.__width = value
+                elif key == "height":
+                    self.__height = value
+                elif key == "x":
+                    self.__x = value
+                elif key == "y":
+                    self.__y = value
