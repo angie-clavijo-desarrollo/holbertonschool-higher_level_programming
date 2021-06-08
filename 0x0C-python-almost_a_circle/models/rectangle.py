@@ -6,8 +6,8 @@ from base import Base
 class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """class constructor, instance attributes"""
-        """call super class, with id, call with __init__ ,  or class parent"""
+        """class constructor, instance attributes
+        call super class, with id, call with __init__ ,  or class parent"""
         super().__init__(id)
         """asignation"""
         self.width = width
@@ -15,9 +15,9 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    """getter and setter for each instance attributes"""
     @property
     def width(self):
+        """getter and setter for each instance attributes"""
         return self.__width
 
     @width.setter
@@ -65,8 +65,8 @@ class Rectangle(Base):
             raise ValueError('y must be >= 0')
         self.__y = value
 
-    """update class Rectangle, add public method, return area value"""
     def area(self):
+        """update class Rectangle, add public method, return area value"""
         return self.width * self.height
 
     def display(self):
@@ -82,13 +82,13 @@ class Rectangle(Base):
         if self.width == 0 or self.height == 0:
             print("")
 
-    """Overriding method"""
     def __str__(self):
+        """Overriding method"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
 
-    """method that assings ags each atri... and update  args and kwargs"""
     def update(self, *args, **kwargs):
+        """method that assings ags each atri... and update  args and kwargs"""
         if len(args):
             for iter_args, arg in enumerate(args):
                 if iter_args == 0:
@@ -113,3 +113,11 @@ class Rectangle(Base):
                     self.__x = value
                 elif key == "y":
                     self.__y = value
+
+    def to_dictionary(self):
+        """update class that returns the dictionary representation of a Rectangle"""
+        vars = ['x', 'y', 'id', 'height', 'width']
+        dict = {}
+        for i in range(len(vars)):
+            dict.update({vars[i]: getattr(self, vars[i])})
+        return dict
