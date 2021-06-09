@@ -17,15 +17,13 @@ class Square(Rectangle):
         """getter and setter public,
         its width and height have the same values"""
 
-        return self.__size
+        return self.__width
 
     @size.setter
     def size(self, value):
         """validations"""
 
-        self.__size = value
         self.__width = value
-        self.__height = value
 
     def __str__(self, **kwargs):
         """overloading"""
