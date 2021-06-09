@@ -58,7 +58,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """"""
+        """function create method"""
         if cls.__name__ == "Rectangle":
             tmp_create = cls(4, 5)
         else:
@@ -69,7 +69,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """"""
+        """function load method"""
 
         tmp_load = cls.__name__ + '.json'
         try:
@@ -102,7 +102,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """"""
+        """create load method"""
 
         tmp_save = '{}.csv'.format(cls.__name__)
         try:
@@ -117,45 +117,3 @@ class Base:
                 return [cls.create(**dics) for dics in tys]
         except IOError:
             return []
-
-
-
-if __name__ == "__main__":
-    from rectangle import Rectangle
-    from square import Square
-
-
-    r1 = Rectangle(10, 7, 2, 8)
-    r2 = Rectangle(2, 4)
-    list_rectangles_input = [r1, r2]
-
-    Rectangle.save_to_file_csv(list_rectangles_input)
-
-    list_rectangles_output = Rectangle.load_from_file_csv()
-
-    for rect in list_rectangles_input:
-        print("[{}] {}".format(id(rect), rect))
-
-    print("---")
-
-    for rect in list_rectangles_output:
-        print("[{}] {}".format(id(rect), rect))
-
-    print("---")
-    print("---")
-
-    s1 = Square(5)
-    s2 = Square(7, 9, 1)
-    list_squares_input = [s1, s2]
-
-    Square.save_to_file_csv(list_squares_input)
-
-    list_squares_output = Square.load_from_file_csv()
-
-    for square in list_squares_input:
-        print("[{}] {}".format(id(square), square))
-
-    print("---")
-
-    for square in list_squares_output:
-        print("[{}] {}".format(id(square), square))
