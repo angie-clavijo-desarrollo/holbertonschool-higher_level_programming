@@ -23,7 +23,7 @@ class Square(Rectangle):
     def size(self, value):
         """validations"""
 
-        self.__width = value
+        self.width = value
 
     def __str__(self, **kwargs):
         """overloading"""
