@@ -142,4 +142,3 @@ class Rectangle(Base):
         for i in range(len(vars)):
             dict.update({vars[i]: getattr(self, vars[i])})
         return dict
-
