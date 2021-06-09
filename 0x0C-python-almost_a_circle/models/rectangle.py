@@ -11,10 +11,10 @@ class Rectangle(Base):
         call super class, with id, call with __init__ ,  or class parent"""
         super().__init__(id)
         """asignation"""
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
