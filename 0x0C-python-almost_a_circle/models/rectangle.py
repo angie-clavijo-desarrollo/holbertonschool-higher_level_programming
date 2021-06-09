@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """created class that inherits of Base"""
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -142,3 +142,4 @@ class Rectangle(Base):
         for i in range(len(vars)):
             dict.update({vars[i]: getattr(self, vars[i])})
         return dict
+
