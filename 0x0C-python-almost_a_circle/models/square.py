@@ -17,7 +17,7 @@ class Square(Rectangle):
         """getter and setter public,
         its width and height have the same values"""
 
-        return self.__width
+        return self.width
 
     @size.setter
     def size(self, value):
