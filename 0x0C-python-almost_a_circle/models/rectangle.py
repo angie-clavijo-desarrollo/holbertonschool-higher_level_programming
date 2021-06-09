@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """created class that inherits of Base"""
+
+
 from base import Base
 
 
@@ -19,11 +21,13 @@ class Rectangle(Base):
     @property
     def width(self):
         """getter and setter for each instance attributes"""
+
         return self.__width
 
     @width.setter
     def width(self, value):
         """validations"""
+
         if type(value) is not int:
             raise TypeError('width must be an integer')
         if value <= 0:
@@ -33,11 +37,13 @@ class Rectangle(Base):
     @property
     def height(self):
         """property of height"""
+
         return self.__height
 
     @height.setter
     def height(self, value):
         """setter of height"""
+
         if type(value) is not int:
             raise TypeError('height must be an integer')
         if value <= 0:
@@ -47,11 +53,13 @@ class Rectangle(Base):
     @property
     def x(self):
         """property x"""
+
         return self.__x
 
     @x.setter
     def x(self, value):
         """setter x"""
+
         if type(value) is not int:
             raise TypeError('x must be an integer')
         if value < 0:
@@ -61,11 +69,13 @@ class Rectangle(Base):
     @property
     def y(self):
         """property y"""
+
         return self.__y
 
     @y.setter
     def y(self, value):
         """setter y"""
+
         if type(value) is not int:
             raise TypeError('y must be an integer')
         if value < 0:
@@ -74,11 +84,13 @@ class Rectangle(Base):
 
     def area(self):
         """update class Rectangle, add public method, return area value"""
+
         return self.width * self.height
 
     def display(self):
         """verify y for print \n and iter and height print ' '
         and  funally print #"""
+
         print('\n' * self.__y, end='')
         for iter_h in range(self.__height):
             print(' ' * self.__x,  end='')
@@ -91,11 +103,13 @@ class Rectangle(Base):
 
     def __str__(self):
         """Overriding method"""
+
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
         """method that assings ags each atri... and update  args and kwargs"""
+
         if len(args):
             for iter_args, arg in enumerate(args):
                 if iter_args == 0:
@@ -124,20 +138,9 @@ class Rectangle(Base):
     def to_dictionary(self):
         """update class that returns the
         dictionary representation of a Rectangle"""
+
         vars = ['x', 'y', 'id', 'height', 'width']
         dict = {}
         for i in range(len(vars)):
             dict.update({vars[i]: getattr(self, vars[i])})
         return dict
-
-if __name__ == "__main__":
-    from rectangle import Rectangle
-
-    r1 = Rectangle(10, 2)
-    print(r1.id)
-
-    r2 = Rectangle(2, 10)
-    print(r2.id)
-
-    r3 = Rectangle(10, 2, 0, 0, 12)
-    print(r3.id)
