@@ -11,10 +11,10 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
         self.size = size
 
-
     @property
     def size(self):
-        """getter and setter public, its width and height have the same values"""
+        """getter and setter public,
+        its width and height have the same values"""
 
         return self.__size
 
@@ -29,8 +29,8 @@ class Square(Rectangle):
     def __str__(self, **kwargs):
         """overloading"""
 
-        return  ("[Square] ({}) {}/{} - {}".format
-            (self.id, self.x, self.y, self.size))
+        return ("[Square] ({}) {}/{} - {}".format
+                (self.id, self.x, self.y, self.size))
 
     def update(self, *args, **kwargs):
         """adding method public"""
