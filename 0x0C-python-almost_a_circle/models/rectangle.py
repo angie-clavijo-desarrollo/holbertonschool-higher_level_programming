@@ -11,12 +11,13 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """class constructor, instance attributes
         call super class, with id, call with __init__ ,  or class parent"""
+
         super().__init__(id)
         """asignation"""
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -85,7 +86,7 @@ class Rectangle(Base):
     def area(self):
         """update class Rectangle, add public method, return area value"""
 
-        return self.width * self.height
+        return self.__width * self.__height
 
     def display(self):
         """verify y for print \n and iter and height print ' '
@@ -98,7 +99,7 @@ class Rectangle(Base):
 
         """update class Rectangle, add public method,
         print # for width and height"""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             print("")
 
     def __str__(self):
