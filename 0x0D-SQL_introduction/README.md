@@ -1,6 +1,6 @@
 # 0x0D. SQL - Introduction
 
-![img](https://www.todopostgresql.com/wp-content/uploads/2018/12/nueva_dest_sentencias.png)
+![img](https://image.flaticon.com/icons/png/512/603/603201.png)
 
 ## Tasks
 
