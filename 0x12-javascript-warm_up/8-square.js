@@ -7,7 +7,7 @@ let str = '';
 if (xtime) {
   while (i < xtime) {
     while (j < xtime) {
-      str += 'x';
+      str += 'X';
       j++;
     }
     console.log(str);
