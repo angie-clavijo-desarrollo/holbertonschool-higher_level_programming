@@ -22,4 +22,3 @@ if (xtime) {
 else {
   console.log('Missing size');
 }
-/
