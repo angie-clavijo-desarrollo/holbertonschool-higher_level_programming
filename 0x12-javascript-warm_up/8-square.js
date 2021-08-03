@@ -15,6 +15,6 @@ if (xtime) {
     str = '';
     i++;
   }
-} else if (xtime <= 0) {
+} else {
   console.log('Missing size');
 }
