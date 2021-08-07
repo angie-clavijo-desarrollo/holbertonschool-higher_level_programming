@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""
+Module for conneting to MYSQL datbase
+"""
 import sys
 import MySQLdb
 from sys import argv
-"""Module for conneting to MYSQL datbase"""
+
 
 """expression not execute when load"""
 if __name__ == "__main__":
