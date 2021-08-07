@@ -14,8 +14,6 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute sql query  using execute method
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
-#    cursor.execute("SELECT * FROM states WHERE  states.id LIKE '2%'")#
     cursor.execute("SELECT * FROM states WHERE name='Arizona'")
     result = cursor.fetchall()
     for row in result:
