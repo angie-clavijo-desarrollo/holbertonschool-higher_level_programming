@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-Module for conneting to MYSQL datbase
+Module for conneting to MYSQLdb datbase
 and view the arguments of the database
-and verify dabase created
+and verify dabase created and finally print agrv's
 """
 import MySQLdb
 from sys import argv
@@ -26,3 +26,4 @@ if __name__ == "__main__":
 
     # disconect from server
     cursor.close()
+    db.close()
