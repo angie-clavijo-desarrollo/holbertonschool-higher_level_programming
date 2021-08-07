@@ -3,7 +3,6 @@
 Module for conneting to MYSQL datbase
 and view the arguments of the database
 """
-import sys
 import MySQLdb
 from sys import argv
 
