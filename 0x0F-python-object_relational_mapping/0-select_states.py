@@ -4,12 +4,12 @@ Module for conneting to MYSQL datbase
 and view the arguments of the database
 and verify dabase created
 """
-import MySQLdb
-from sys import argv
-
 
 # expression not execute when load
 if __name__ == "__main__":
+    import MySQLdb
+    from sys import argv
+
 
     # to connect
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
