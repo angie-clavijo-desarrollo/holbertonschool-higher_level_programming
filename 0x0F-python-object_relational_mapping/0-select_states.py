@@ -2,6 +2,7 @@
 """
 Module for conneting to MYSQL datbase
 and view the arguments of the database
+and verify dabase created
 """
 import MySQLdb
 from sys import argv
