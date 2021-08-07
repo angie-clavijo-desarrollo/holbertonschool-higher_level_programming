@@ -20,4 +20,5 @@ if __name__ == "__main__":
         print(row)
 
     # disconect from server
+    cursor.close()
     db.close()
