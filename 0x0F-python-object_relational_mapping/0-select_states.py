@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 Module for conneting to MYSQL datbase
+and view the arguments of the database
 """
 import sys
 import MySQLdb
