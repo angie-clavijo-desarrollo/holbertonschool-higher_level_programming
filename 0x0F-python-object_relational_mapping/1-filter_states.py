@@ -7,7 +7,8 @@ and doing query at database
 import MySQLdb
 from sys import argv
 
-# expression not execute when load"""
+
+# expression not execute when load
 if __name__ == "__main__":
 
     # to connect
@@ -18,8 +19,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute sql query  using execute method
-    cursor.execute("SELECT * FROM states WHERE \
-        name LIKE 'N%' ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     result = cursor.fetchall()
     for row in result:
         print(row)
