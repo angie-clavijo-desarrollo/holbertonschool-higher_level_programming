@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module for conneting to MYSQLdb datbase
+Module for connecting to MySQLdb database
 and view the arguments of the database
 and doing query at database
 """
@@ -19,11 +19,12 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute sql query  using execute method
-    cursor.execute("SELECT * FROM states WHERE MATCH 'name'")
+    var_of_query = "SELECT * FROM states WHERE name LIKE '{}'".format(argv[4])
+    cursor.execute(var_of_query)
     result = cursor.fetchall()
     for row in result:
         print(row)
 
-    # disconect from server
+    # disconnect from server
     cursor.close()
     db.close()
