@@ -2,7 +2,7 @@
 """
 Module for connecting to MYSQLdb database
 and view the arguments of the database
-and verify database created and finally print argv
+and verify database created and finally print agrv's
 """
 import MySQLdb
 from sys import argv
@@ -14,7 +14,6 @@ if __name__ == "__main__":
     # to connect
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3])
-
 
     # prepare cursor object cursor () method
     cursor = db.cursor()
