@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module for conneting to MYSQLdb datbase
+Module for connecting to MYSQLdb database
 and view the arguments of the database
 and doing query at database
 """
@@ -25,6 +25,6 @@ if __name__ == "__main__":
     for row in result:
         print(row)
 
-    # disconect from server
+    # disconnect from server
     cursor.close()
     db.close()

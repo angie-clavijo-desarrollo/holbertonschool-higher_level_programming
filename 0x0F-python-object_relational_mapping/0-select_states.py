@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-Module for conneting to MYSQLdb datbase
+Module for connecting to MYSQLdb database
 and view the arguments of the database
-and verify dabase created and finally print agrv's
+and verify database created and finally print argv
 """
 import MySQLdb
 from sys import argv
@@ -15,6 +15,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3])
 
+
     # prepare cursor object cursor () method
     cursor = db.cursor()
 
@@ -24,6 +25,6 @@ if __name__ == "__main__":
     for row in result:
         print(row)
 
-    # disconect from server
+    # disconnect from server
     cursor.close()
     db.close()
