@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Module for conneting to MYSQLdb datbase
+and view the arguments of the database
+and doing query at database
+"""
 import MySQLdb
 from sys import argv
 
