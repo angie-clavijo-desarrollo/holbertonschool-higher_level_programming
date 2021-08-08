@@ -19,7 +19,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute sql query  using execute method
-    cursor.execute("SELECT * FROM states WHERE name='Arizona'")
+    cursor.execute("SELECT * FROM states WHERE name CONTAINS 'California' OR 'Arizona' OR 'Texas' OR 'New York'OR 'Nevada'")
     result = cursor.fetchall()
     for row in result:
         print(row)
