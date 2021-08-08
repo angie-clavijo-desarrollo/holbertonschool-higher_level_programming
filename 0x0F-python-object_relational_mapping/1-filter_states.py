@@ -19,9 +19,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute sql query  using execute method
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    # Execute sql query  using execute method
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'\
+        ORDER BY id ASC")
     result = cursor.fetchall()
     for row in result:
         print(row)
