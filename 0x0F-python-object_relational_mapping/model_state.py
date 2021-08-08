@@ -7,8 +7,8 @@ as syntax of SQLalchemy
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
-# super class that permit of mapping of class children
 Base = declarative_base()
+# super class that permit of mapping of class children
 
 
 # inherits
