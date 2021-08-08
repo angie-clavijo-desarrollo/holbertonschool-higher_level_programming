@@ -8,9 +8,11 @@ from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
+""" super class that permit of mapping of class children """
 
 
 class State(Base):
+    """ inherits"""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
