@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     # Execute sql query  using execute method
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'")
     result = cursor.fetchall()
     for row in result:
         print(row)
