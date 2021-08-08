@@ -2,7 +2,7 @@
 """
 Module for connecting to MYSQLdb database
 and view the arguments of the database
-and verify database created and finally print agrv's
+and verify database created and finally print agrv
 """
 import MySQLdb
 from sys import argv
