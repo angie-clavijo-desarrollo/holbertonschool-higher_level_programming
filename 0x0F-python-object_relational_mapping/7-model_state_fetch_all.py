@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module for connecting to MYSQLdb database
+Module for connecting to SQLalquemy database
 and view the arguments of the database
 and doing query at database
 """
