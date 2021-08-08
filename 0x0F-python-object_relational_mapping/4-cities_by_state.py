@@ -20,8 +20,8 @@ if __name__ == "__main__":
 
     # Execute sql query  using execute method
     cursor.execute(" SELECT cities.id, cities.name, states.name FROM cities \
-                    INNER JOIN states ON cities.state_id=cities.state_id \
-                    ORDER BY cities.id ASC;")
+                    INNER JOIN states ON cities.state_id = states.id \
+                    ORDER BY cities.id ASC")
     result = cursor.fetchall()
     for row in result:
         print(row)
