@@ -19,7 +19,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute sql query  using execute method
-    var_of_query = "SELECT * FROM states WHERE name LIKE BINARY '{}'".format(argv[4])
+    var_of_query = "SELECT * FROM states WHERE name \
+                    LIKE BINARY '{}'".format(argv[4])
     # Var and execute
     cursor.execute(var_of_query)
     result = cursor.fetchall()
