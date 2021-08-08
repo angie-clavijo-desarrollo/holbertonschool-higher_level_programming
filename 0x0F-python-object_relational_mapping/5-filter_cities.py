@@ -19,12 +19,14 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute sql query  using execute method
-    cursor.execute("   SELECT cities.name FROM cities\
+    cursor.execute(" SELECT cities.name FROM cities\
                     INNER JOIN states ON cities.state_id = states.id\
                     WHERE states.name = %s;", [argv[4]])
     result = cursor.fetchall()
+    output = []
     for row in result:
-        print(row)
+        output.append(row[0])
+    print(*output, sep=", ")
 
     # disconnect from server
     cursor.close()
