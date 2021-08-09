@@ -25,7 +25,7 @@ if __name__ == "__main__":
     session = Session()
 
     Base.metadata.create_all(engine)
-    results = session.query(State).get(1)
+    results = session.query(State).first()
 
     if results is None:
         print("Nothing")
