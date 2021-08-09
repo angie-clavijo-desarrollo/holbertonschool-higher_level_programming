@@ -8,7 +8,6 @@ from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
-""" super class that permit of mapping of class children """
 
 
 class State(Base):
