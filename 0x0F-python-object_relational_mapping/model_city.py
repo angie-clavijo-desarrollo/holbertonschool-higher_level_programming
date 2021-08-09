@@ -6,7 +6,7 @@ as syntax of SQLalchemy
 """
 from sqlalchemy import Column, Integer, String, create_engine, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from model_state import Base
 
 
 Base = declarative_base()
