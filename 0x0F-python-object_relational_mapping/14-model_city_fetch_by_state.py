@@ -11,18 +11,14 @@ from model_city import City
 from sys import argv
 import sys
 
-# expression not execute when load
 if __name__ == "__main__":
 
-    # to connect
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
 
-    # configuration session
     Session = sessionmaker(bind=engine)
 
-    # created session with constructor:
     session = Session()
 
     Base.metadata.create_all(engine)
