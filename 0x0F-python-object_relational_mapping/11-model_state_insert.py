@@ -31,6 +31,4 @@ if __name__ == "__main__":
     session.commit()
     print(c1.id)
 
-
-
     session = session.close()
