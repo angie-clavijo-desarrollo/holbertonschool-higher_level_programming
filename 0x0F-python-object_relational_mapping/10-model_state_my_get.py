@@ -29,6 +29,6 @@ if __name__ == "__main__":
 
     if results:
         print("{}".format(results.id))
-    else:
+    if results == 0:
         print("Not found")
     session = session.close()
