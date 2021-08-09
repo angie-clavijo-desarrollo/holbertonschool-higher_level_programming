@@ -4,11 +4,11 @@ Module for connecting to SQLalquemy database
 and view the arguments of the database
 and doing query at database
 """
-from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 from model_city import City
+from sys import argv
 import sys
 
 # expression not execute when load

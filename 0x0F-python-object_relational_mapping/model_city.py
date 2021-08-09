@@ -5,12 +5,7 @@ with port 3306 and create table
 as syntax of SQLalchemy
 """
 from sqlalchemy import Column, Integer, String, create_engine, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base
-
-
-Base = declarative_base()
-""" super class that permit of mapping of class children"""
 
 
 class City(Base):
