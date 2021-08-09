@@ -4,7 +4,7 @@ Module that connect a database
 with port 3306 and create table
 as syntax of SQLalchemy
 """
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, create_engine, ForeignKey
 from model_state import Base
 
 
