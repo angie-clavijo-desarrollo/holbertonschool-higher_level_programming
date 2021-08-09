@@ -27,5 +27,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     x = delete(State).where(State.name.contains('%a%'))
+    y = engine.execute(x)
 
     session = session.close()
