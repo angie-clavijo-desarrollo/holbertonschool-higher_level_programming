@@ -4,8 +4,10 @@ Module that connect a database
 with port 3306 and create table
 as syntax of SQLalchemy
 """
-from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy import Column, Integer, String, create_engine, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
+
 
 Base = declarative_base()
 """ super class that permit of mapping of class children"""
@@ -14,5 +16,6 @@ Base = declarative_base()
 class City(Base):
     """ inherits"""
     __tablename__ = 'city'
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
+    state_id = Column(Integer, ForeignKey("states.id"), nullable=False, )
