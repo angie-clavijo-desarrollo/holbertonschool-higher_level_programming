@@ -1,3 +1,3 @@
 #!/bin/bash
 #  cURL method ALL
-curl -sI "${X}" "${1}"
+curl -sI "${1}" | grep Allow
