@@ -1,3 +1,3 @@
 #!/bin/bash
 #  cURL headers
-curl -s --head "${1}"
+curl -sI --head "${1}"
