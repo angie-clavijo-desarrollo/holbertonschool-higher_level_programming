@@ -1,3 +1,3 @@
 #!/bin/bash
 #  cURL method ALL
-curl -s "${X}" "${1}"
+curl -sI "${X}" "${1}"
