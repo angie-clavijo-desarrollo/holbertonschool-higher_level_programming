@@ -1,3 +1,3 @@
 #!/bin/bash
 #  cURL method ALL
-curl -v -X OPTIONS "${1}"
+curl -v -sX OPTIONS "${1}"
