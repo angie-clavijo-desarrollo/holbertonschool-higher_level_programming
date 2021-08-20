@@ -1,3 +1,3 @@
 #!/bin/bash
 #  cURL to the end
-curl -sLI "${1}" 
+curl -sL "${1}" 
