@@ -9,20 +9,15 @@ if __name__ == "__main__":
 
     if len(sys.argv) > 1:
         data = {'q': sys.argv[1]}
-        print("5")
     else:
         data = {'q': ""}
-        print("4")
 
     req = requests.post(url, data=data)
     try:
         size = req.json()
         if size == {}:
             print("No result")
-            print("3")
         else:
             print("[{}] {}".format(size["id"], size["name"]))
-            print("2")
     except ValueError:
         print("Not a valid JSON")
-        print("1")
