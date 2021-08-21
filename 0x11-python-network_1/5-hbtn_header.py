@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" """
+""" response header and request """
 import urllib.request
 import sys
 
